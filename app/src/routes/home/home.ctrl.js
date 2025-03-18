@@ -1,12 +1,28 @@
-const home = (req, res) => {
+"use strict";
+
+const User = require("../../modles/User");
+
+const output = {
+  home: (req, res) => {
     res.render("home/index");
+  },
+  login: (req, res) => {
+    res.render("home/login");
+  },
+  register: (req, res) => {
+    res.render("home/register");
+  },
 };
 
-const login = (req, res) => {
-    res.render("home/login")
-}
+const process = {
+  login: (req, res) => {
+    const user = new User(req.body);
+    const response = user.login();
+    return res.json(response);
+  },
+};
 
 module.exports = {
-    home,
-    login
+  output,
+  process,
 };
