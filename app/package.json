@@ -1,9 +1,14 @@
 {
   "dependencies": {
+    "app-root-path": "^3.1.0",
     "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "nodemon": "^3.1.9"
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.9",
+    "winston": "^3.17.0"
   },
   "name": "app",
   "version": "1.0.0",
@@ -12,7 +17,7 @@
     "app": "bin/www.js"
   },
   "scripts": {
-    "start": "nodemon ./node_modules/nodemon/bin/nodemon.js ./bin/www.js"
+    "start": "./bin/www.js"
   },
   "author": "",
   "license": "ISC",
